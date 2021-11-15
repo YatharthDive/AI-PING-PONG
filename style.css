@@ -15,3 +15,12 @@
 #start,#status{
     font-size:25px;
 }
+.modal-dialog{
+    width:90%;
+}
+.modal-body{
+    background-color: cyan;
+}
+.modal-header{
+    background-color: darkseagreen;
+}
