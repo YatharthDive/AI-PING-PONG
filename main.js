@@ -24,7 +24,27 @@ var ball = {
 function setup(){
   var canvas =  createCanvas(700,600);
   canvas.parent("c1")
+  v1=createCapture(VIDEO)
+  v1.size(600,400)
+  v1.parent("c2")
+  pn=ml5.poseNet(v1,ml)
+  pn.on('pose',gotposes)
 }
+leftWristX=0;
+leftWristY=0;
+function gotposes(results){
+  if(results.length>0){
+    console.log(results)
+    leftWristX=results[0].pose.leftWrist.x;
+    leftWristY=results[0].pose.leftWrist.y;
+    console.log("leftWristex="+leftWristX)
+    console.log("leftWrist="+leftWristY)
+  }
+}
+    function ml(){
+    console.log("modelLoaded")
+  }
+
 
 
 function draw(){

@@ -1,78 +1,82 @@
 <!--created by prashant shukla-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ping Pong</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-     
-        <link rel="stylesheet" href="style.css">
-        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
 
-    </head>
-    <body background="background1.jpg">
-        <center>
-          <div class="btn btn-primary heading">
-            <h3>
-              AI PING PONG
-            </h3>
-            <button class="btn btn-warning" data-toggle="modal" data-target="#mymodal">
-            Instructions
+<head>
+  <title>Ping Pong</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+
+</head>
+
+<body background="background1.jpg">
+  <center>
+    <div class="btn btn-primary heading">
+      <h3>
+        AI PING PONG
+      </h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#mymodal">
+        Instructions
+      </button>
+
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-success" onclick="Start_Game()" id=start>
+      Play Game
+    </button>
+    <br>
+    <br>
+    <h3 id="status" class="btn btn-info">
+    </h3>
+    <br>
+    <br>
+    <div id="c1">
+    </div>
+    <div id=c2>
+    </div>
+    <div id="Game_Console">
+
+    </div>
+    <h4>
+      Source code :<a target="_blank" href="https://github.com/linuk">Linuk
+      </a>
+      || Game credit: Mario
+    </h4>
+    <div id="mymodal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="moadl-content">
+          <div class="modal-header">
+            <button class=close data-dismiss=modal>
+              &times;
             </button>
-            
-          </div>
-          <br>
-          <br>
-          <button class="btn btn-success" onclick="Start_Game()" id=start>
-            Play Game
-          </button>
-          <br>
-          <br>
-          <h3 id="status" class="btn btn-info">
-            </h3>
-            <br>
-            <br>
-            <div id="c1">
-        
-            </div>
-            <div id="Game_Console">
-        
-            </div>
             <h4>
-              Source code :<a target="_blank" href="https://github.com/linuk">Linuk
-              </a>
-              || Game credit: Mario
+              Instructions
             </h4>
-            <div id="mymodal" class="modal fade">
-              <div class="modal-dialog">
-                <div class="moadl-content">
-                  <div class="modal-header">
-                    <button class=close data-dismiss=modal>
-                      &times;
-                    </button>
-                    <h4>
-                      Instructions
-                    </h4>
-                  </div>
-                  <div class=modal-body>
-                  <h3>
-                    Move your left arm to make the paddel go up
-                    <br>
-                    Move your right arm to make the paddel go down
-                  </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-success" onclick="Restart_Game()" id=restart>
-              Restart Game
-            </button>
-        </center>
+          </div>
+          <div class=modal-body>
+            <h3>
+              Move your left arm to make the paddel go up
+              <br>
+              Move your right arm to make the paddel go down
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success" onclick="Restart_Game()" id=restart>
+      Restart Game
+    </button>
+  </center>
 
-        <script src="main.js"></script>
-    </body>
+  <script src="main.js"></script>
+</body>
+
 </html>
