@@ -32,13 +32,18 @@ function setup(){
 }
 leftWristX=0;
 leftWristY=0;
+game_Status=""
+function start_GAME(){
+  game_Status="start";
+  document.getElementById("status").innerHTML="Game Is Loading"
+}
 function gotposes(results){
   if(results.length>0){
-    console.log(results)
+    //console.log(results)
     leftWristX=results[0].pose.leftWrist.x;
     leftWristY=results[0].pose.leftWrist.y;
-    console.log("leftWristex="+leftWristX)
-    console.log("leftWrist="+leftWristY)
+    //console.log("leftWristex="+leftWristX)
+    //console.log("leftWrist="+leftWristY)
   }
 }
     function ml(){
@@ -48,6 +53,11 @@ function gotposes(results){
 
 
 function draw(){
+fill("cyan")
+console.log("inside draw"+leftWristX)
+circle(leftWristX,leftWristY,20)
+fill("black");
+stroke("black");
 
  background(0); 
 
