@@ -71,6 +71,7 @@ function draw() {
 
   image(v1,0,0,700,600)
     fill("cyan")
+    if (confidence >0.2)
     console.log("inside draw" + leftWristX)
     circle(leftWristX, leftWristY, 20)
     fill("black");
