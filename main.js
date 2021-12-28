@@ -94,6 +94,7 @@ function draw() {
     stroke(0, 0, 250);
     strokeWeight(0.5);
     paddle1Y = leftWristY;
+    if (leftWristY > 300){paddle1Y = leftWristY+70;} else {paddle1Y = leftWristY-70;}
     rect(paddle1X, paddle1Y, paddle1, paddle1Height, 100);
 
 
