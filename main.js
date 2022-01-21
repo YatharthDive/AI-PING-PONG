@@ -55,6 +55,7 @@ function gotposes(results) {
     //console.log(results)
     leftWristX = results[0].pose.leftWrist.x;
     leftWristY = results[0].pose.leftWrist.y;
+    confidence= leftWristX = results[0].pose.leftWrist.confidence
     //console.log("leftWristex="+leftWristX)
     //console.log("leftWrist="+leftWristY)
   }
